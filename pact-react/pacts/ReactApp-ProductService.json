@@ -1,0 +1,41 @@
+{
+  "consumer": {
+    "name": "ReactApp"
+  },
+  "interactions": [
+    {
+      "description": "Una petición GET a /users/1",
+      "providerState": "El usuario existe en la base de datos",
+      "request": {
+        "method": "GET",
+        "path": "/users/1"
+      },
+      "response": {
+        "body": {
+          "email": "juan@example.com",
+          "id": 1,
+          "name": "Juan Pérez"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "13.2.0"
+    },
+    "pactRust": {
+      "ffi": "0.4.22",
+      "models": "1.2.3"
+    },
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  },
+  "provider": {
+    "name": "ProductService"
+  }
+}
